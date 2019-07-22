@@ -1,0 +1,411 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>优化-其他 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="opt-数据倾斜.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">* Hive</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Hive优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="opt-小文件.html">
+            
+                <a href="opt-小文件.html">
+            
+                    
+                    优化-小文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="opt-数据倾斜.html">
+            
+                <a href="opt-数据倾斜.html">
+            
+                    
+                    优化-数据倾斜
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="opt-其他.html">
+            
+                <a href="opt-其他.html">
+            
+                    
+                    优化-其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Hive函数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="fun介绍.html">
+            
+                <a href="fun介绍.html">
+            
+                    
+                    Hive函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="UDF使用.html">
+            
+                <a href="UDF使用.html">
+            
+                    
+                    UDF使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="UDF开发.html">
+            
+                <a href="UDF开发.html">
+            
+                    
+                    UDF开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >优化-其他</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>[TOC]</p>
+<h3 id="map&#x9636;&#x6BB5;&#x7684;&#x4F18;&#x5316;">Map&#x9636;&#x6BB5;&#x7684;&#x4F18;&#x5316;</h3>
+<p>&#x200B;    &#x63A7;&#x5236;hive&#x4EFB;&#x52A1;&#x4E2D;&#x7684;map&#x6570;&#xFF0C;&#x786E;&#x5B9A;&#x5408;&#x9002;&#x7684;map&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x6BCF;&#x4E2A;map&#x5904;&#x7406;&#x5408;&#x9002;&#x7684;&#x6570;&#x636E;&#x91CF;</p>
+<ul>
+<li>map&#x4E2A;&#x6570;&#x5F71;&#x54CD;&#x56E0;&#x5B50;<ul>
+<li>input&#x76EE;&#x5F55;&#x4E2D;&#x6587;&#x4EF6;&#x603B;&#x4E2A;&#x6570;&#xFF1B;</li>
+<li>input&#x76EE;&#x5F55;&#x4E2D;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF1B;</li>
+<li>&#x96C6;&#x7FA4;&#x8BBE;&#x7F6E;&#x7684;&#x6587;&#x4EF6;&#x5757;&#x5927;&#x5C0F;(&#x9ED8;&#x8BA4;&#x4E3A;128M, &#x53EF;&#x5728;hive&#x4E2D;&#x901A;&#x8FC7;set dfs.block.size;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;hive&#x4E2D;&#x81EA;&#x5B9A;&#x4E49;&#x4FEE;&#x6539;)&#xFF1B;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-c">&#x4E3E;&#x4F8B;&#xFF1A;
+input&#x76EE;&#x5F55;&#x4E2D;&#x6709;<span class="hljs-number">1</span>&#x4E2A;&#x6587;&#x4EF6;&#xFF08;<span class="hljs-number">300</span>M&#xFF09;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;<span class="hljs-number">3</span>&#x4E2A;&#x5757;&#xFF08;<span class="hljs-number">2</span>&#x4E2A;<span class="hljs-number">128</span>M&#xFF0C;<span class="hljs-number">1</span>&#x4E2A;<span class="hljs-number">44</span>M&#xFF09;&#x5373;<span class="hljs-number">3</span>&#x4E2A;Map&#x6570;&#x3002;
+input&#x76EE;&#x5F55;&#x4E2D;&#x6709;<span class="hljs-number">3</span>&#x4E2A;&#x6587;&#x4EF6;&#xFF08;<span class="hljs-number">5</span>M,<span class="hljs-number">10</span>M,<span class="hljs-number">200</span>M&#xFF09;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;<span class="hljs-number">4</span>&#x4E2A;&#x5757;&#xFF08;<span class="hljs-number">5</span>M,<span class="hljs-number">10</span>M,<span class="hljs-number">128</span>M,<span class="hljs-number">72</span>M&#xFF09;&#x5373;<span class="hljs-number">4</span>&#x4E2A;Map&#x6570;&#x3002;
+</code></pre>
+<h5 id="&#x51CF;&#x5C11;map&#x6570;&#xFF1A;">&#x51CF;&#x5C11;Map&#x6570;&#xFF1A;</h5>
+<p>&#x200B;    &#x5F53;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x6709;&#x5F88;&#x591A;&#x5C0F;&#x6587;&#x4EF6;&#xFF08;&#x8FDC;&#x8FDC;&#x5C0F;&#x4E8E;&#x5757;&#x5927;&#x5C0F;128m&#xFF09;,&#x4F1A;&#x4EA7;&#x751F;&#x5F88;&#x591A;Map&#xFF0C;</p>
+<p>&#x200B;    &#x800C;&#x4E00;&#x4E2A;<strong>Map&#x4EFB;&#x52A1;&#x542F;&#x52A8;&#x548C;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x95F4;</strong>&#x8FDC;&#x8FDC;&#x5927;&#x4E8E;&#x903B;&#x8F91;&#x5904;&#x7406;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5C31;&#x4F1A;&#x9020;&#x6210;&#x5F88;&#x5927;&#x7684;&#x8D44;&#x6E90;&#x6D6A;&#x8D39;&#xFF0C;&#x800C;&#x4E14;&#x540C;&#x65F6;&#x53EF;&#x6267;&#x884C;&#x7684;map&#x6570;&#x662F;&#x53D7;&#x9650;&#x7684;&#x3002;</p>
+<pre><code class="lang-mysql">set mapred.max.split.size=100000000; -- &#xFF08;100M&#xFF09;
+set mapred.min.split.size.per.node=100000000;
+set mapred.min.split.size.per.rack=100000000;
+set hive.input.format=org.apache.hadoop.hive.ql.io.CombineHiveInputFormat;//&#x8868;&#x793A;&#x6267;&#x884C;&#x524D;&#x8FDB;&#x884C;&#x5C0F;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#x3002;
+//&#x5927;&#x4E8E;128:&#x6309;&#x7167;128M&#x5206;&#x5272;&#xFF1B;100~128&#x6309;&#x7167;100&#x5206;&#xFF1B;&#x5C0F;&#x4E8E;100&#x7684;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x3002;
+</code></pre>
+<h5 id="&#x589E;&#x52A0;map&#x6570;">&#x589E;&#x52A0;Map&#x6570;</h5>
+<p>&#x200B;    &#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x5C0F;&#x4E8E;128M&#x7684;&#x6587;&#x4EF6;(&#x5176;&#x4E2D;&#x6709;&#x4E0A;&#x5343;&#x4E07;&#x6761;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5B57;&#x6BB5;&#x5C11;&#x5E76;&#x4E14;&#x6570;&#x636E;&#x5355;&#x4F4D;&#x5C0F;)</p>
+<p>&#x200B;    &#x5982;&#x679C;map&#x5904;&#x7406;&#x7684;&#x903B;&#x8F91;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x7528;<strong>&#x4E00;&#x4E2A;map</strong>&#x4EFB;&#x52A1;&#x53BB;&#x505A;&#xFF0C;&#x8017;&#x65F6;&#x6BD4;&#x8F83;&#x5927;&#x3002;</p>
+<pre><code class="lang-mysql">set mapred.reduce.tasks=10;
+create table a_1 as 
+select * from a distribute by rand();
+-- &#x8868;&#x793A;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;Map&#x4EFB;&#x52A1;&#x6570;&#x6765;&#x4E2D;&#x52A0;Map&#xFF0C;&#x628A;a&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5747;&#x5300;&#x7684;&#x653E;&#x5230;a_1&#x76EE;&#x5F55;&#x4E0B;10&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x3002;
+</code></pre>
+<h4 id="reduce&#x9636;&#x6BB5;&#x7684;&#x4F18;&#x5316;">Reduce&#x9636;&#x6BB5;&#x7684;&#x4F18;&#x5316;</h4>
+<ul>
+<li>reduce&#x6570;&#x91CF;:&#x3000;min(reducers.max&#xFF0C;  &#x603B;&#x8F93;&#x5165;&#x6570;&#x636E;&#x91CF;/ bytes per reducer))</li>
+</ul>
+<pre><code>param1:hive.exec.reducers.bytes.per.reducer&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;1000^3&#xFF09;
+param2:hive.exec.reducers.max&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;999&#xFF09;
+</code></pre><p>&#x200B;    </p>
+<h3 id="&#x4F5C;&#x4E1A;&#x540D;">&#x4F5C;&#x4E1A;&#x540D;</h3>
+<h4 id="mr&#x5F15;&#x64CE;-set-mapredjobnamejob100001">mr&#x5F15;&#x64CE;: set mapred.job.name=job100001</h4>
+<pre><code>
+set hive.execution.engine=mr;
+set mapred.job.name=job100001;
+create table dw_tmp_db.tmp_dm_mid_mbl_mdr_agg_daily_051 as select * from dw_tmp_db.tmp_dm_mid_mbl_mdr_agg_daily_042 limit 111;
+
+set mapred.job.name=job100002;
+create table  dw_tmp_db.tmp_dm_mid_mbl_mdr_agg_daily_052 as select * from dw_tmp_db.tmp_dm_mid_mbl_mdr_agg_daily_042 limit 111;
+
+set mapred.job.name=job100003;
+drop table if exists dw_tmp_db.tmp_dm_mid_mbl_mdr_agg_daily_051;
+drop table if exists dw_tmp_db.tmp_dm_mid_mbl_mdr_agg_daily_052;
+</code></pre><h4 id="tez&#x8BBE;&#x7F6E;appname">Tez&#x8BBE;&#x7F6E;appName</h4>
+<ul>
+<li>Tez&#x662F;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;session.id&#x6765;&#x8BBE;&#x7F6E;appName&#x7684;</li>
+<li>&#x5728;YARN &#x7684;Web UI&#x754C;&#x9762;&#x67E5;&#x770B;&#x5230;&#x7684;appName&#x548C;&#x4F7F;&#x7528;yarn application -list&#x67E5;&#x770B;&#x5230;&#x7684;appName&#x4E00;&#x6837;</li>
+<li>&#x5FC5;&#x987B;&#x5728;hive&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x8BBE;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x8FDB;&#x5165;hive&#x91CC;&#x9762;&#x8BBE;&#x7F6E; <code>hive.session.id</code>&#xFF0C;YARN&#x7684;Web UI&#x754C;&#x9762;&#x548C;yarn application -list&#x67E5;&#x770B;&#x7684;&#x7ED3;&#x679C;&#x662F;<strong>&#x4E0D;&#x751F;&#x6548;</strong>&#x7684;&#x3002;</li>
+</ul>
+<pre><code>hive --hiveconf hive.session.id=appName.id
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="opt-数据倾斜.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 优化-数据倾斜">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"优化-其他","level":"1.2.3","depth":2,"next":{"title":"Hive函数","level":"2.1","depth":1,"ref":"","articles":[{"title":"Hive函数","level":"2.1.1","depth":2,"path":"docs/fun介绍.md","ref":"docs/fun介绍.md","articles":[]},{"title":"UDF使用","level":"2.1.2","depth":2,"path":"docs/UDF使用.md","ref":"docs/UDF使用.md","articles":[]},{"title":"UDF开发","level":"2.1.3","depth":2,"path":"docs/UDF开发.md","ref":"docs/UDF开发.md","articles":[]}]},"previous":{"title":"优化-数据倾斜","level":"1.2.2","depth":2,"path":"docs/opt-数据倾斜.md","ref":"docs/opt-数据倾斜.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/opt-其他.md","mtime":"2019-07-22T02:19:29.610Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-22T08:40:00.945Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
