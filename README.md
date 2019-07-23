@@ -4,9 +4,9 @@
 
 ## 报表
 
-| 项目                                                     | 星    级 | 介绍                                                         |
-| :------------------------------------------------------- | :--- | ------------------------------------------------------------ |
-| [CBoard](https://github.com/yzhang921/CBoard)            | ***  | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
+| 项目                                                     | 星级 | 介绍                                                         |
+| ------------------------------------------------------- | --- | ------------------------------------------------------------ |
+| [CBoard](https://github.com/yzhang921/CBoard)            | *  *  *  | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
 | [Superset](https://github.com/apache/incubator-superset) | ***  | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
 | [metabase](https://github.com/metabase/metabase)         | **   | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
 | [EasyReport](https://github.com/metabase/metabase)       | *    | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
