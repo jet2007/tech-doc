@@ -1,0 +1,532 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Hive函数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="UDF使用.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">* Hive</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Hive优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="opt-小文件.html">
+            
+                <a href="opt-小文件.html">
+            
+                    
+                    优化-小文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="opt-数据倾斜.html">
+            
+                <a href="opt-数据倾斜.html">
+            
+                    
+                    优化-数据倾斜
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="opt-其他.html">
+            
+                <a href="opt-其他.html">
+            
+                    
+                    优化-其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Hive函数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1.1" data-path="fun介绍.html">
+            
+                <a href="fun介绍.html">
+            
+                    
+                    Hive函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="UDF使用.html">
+            
+                <a href="UDF使用.html">
+            
+                    
+                    UDF使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="UDF开发.html">
+            
+                <a href="UDF开发.html">
+            
+                    
+                    UDF开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Hive函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="hive-&#x51FD;&#x6570;">Hive &#x51FD;&#x6570;</h1>
+<ul>
+<li>Help</li>
+</ul>
+<blockquote>
+<p>show functions like &apos;*date*&apos; </p>
+<p>desc function max</p>
+</blockquote>
+<h2 id="&#x590D;&#x6742;&#x7C7B;&#x578B;">&#x590D;&#x6742;&#x7C7B;&#x578B;</h2>
+<table>
+<thead>
+<tr>
+<th>Func</th>
+<th>Code</th>
+<th>Result</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>array</td>
+<td>select array(1,2,3,4)</td>
+<td>[1,2,3,4]</td>
+<td>&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td>map</td>
+<td>SELECT map(&apos;k1&apos;,&apos;val1&apos;,&apos;key2&apos;,&apos;val2&apos;)</td>
+<td>{&quot;k1&quot;:&quot;val1&quot;,&quot;key2&quot;:&quot;val2&quot;}</td>
+<td>map</td>
+</tr>
+<tr>
+<td>struct</td>
+<td>SELECT  struct(1,&apos;val2&apos;,3,&apos;val4&apos;,5)</td>
+<td>{&quot;col1&quot;:1,&quot;col2&quot;:&quot;val2&quot;,&quot;col3&quot;:3,&quot;col4&quot;:&quot;val4&quot;,&quot;col5&quot;:5}</td>
+<td>struct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6761;&#x4EF6;&#x51FD;&#x6570;">&#x6761;&#x4EF6;&#x51FD;&#x6570;</h2>
+<table>
+<thead>
+<tr>
+<th>Func</th>
+<th>Code</th>
+<th>Result</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>if</td>
+<td>select if(1=1,&apos;a&apos;,&apos;b&apos;)</td>
+<td>a</td>
+<td>&#x4E8C;&#x5143;&#x6761;&#x4EF6;&#x5224;&#x65AD;</td>
+</tr>
+<tr>
+<td>nvl</td>
+<td>select nvl(null,&apos;a&apos;)</td>
+<td>a</td>
+<td>&#x7A7A;&#x503C;&#x4E8C;&#x5143;&#x6761;&#x4EF6;&#x5224;&#x65AD;</td>
+</tr>
+<tr>
+<td>coalesce</td>
+<td>select coalesce(null,null,&apos;a&apos;,&apos;b&apos;)</td>
+<td>a</td>
+<td>&#x7A7A;&#x503C;&#x591A;&#x5143;&#x6761;&#x4EF6;&#x5224;&#x65AD;</td>
+</tr>
+<tr>
+<td>isnull</td>
+<td>select isnull(1),isnotnull(1)</td>
+<td>true,false</td>
+<td>&#x662F;&#x5426;&#x4E3A;&#x7A7A;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;">&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;</h2>
+<table>
+<thead>
+<tr>
+<th>Func</th>
+<th>Code</th>
+<th>Result</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>concat</td>
+<td></td>
+<td></td>
+<td>&#x5B57;&#x7B26;&#x4E32;&#x6309;&#x6B21;&#x5E8F;&#x8FDB;&#x884C;&#x62FC;&#x63A5;</td>
+</tr>
+<tr>
+<td>concat_ws</td>
+<td>select concat<em>ws(&apos;</em>&apos;,&apos;1&apos;,&apos;2&apos;,&apos;3&apos;)</td>
+<td>1_2_3</td>
+<td>&#x4E0E;concat&#x7C7B;&#x4F3C;,&#x6307;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#x559C;&#x8FDB;&#x884C;&#x5206;&#x9694;</td>
+</tr>
+<tr>
+<td>find_in_set</td>
+<td>select find_in_set(&apos;ab&apos;, &apos;abc,b,ab,c,def,ab&apos;)<br>select find_in_set(&apos;ab&apos;, &apos;abc,b,a,c,def,ab&apos;)</td>
+<td>3<br>6</td>
+<td>&#x8FD4;&#x56DE;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;str&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x53C2;&#x6570;str&#x4E3A;&#x9017;&#x53F7;&#x6216;&#x67E5;&#x627E;&#x5931;&#x8D25;&#x5C06;&#x8FD4;&#x56DE;0</td>
+</tr>
+<tr>
+<td>regexp_extract</td>
+<td>select regexp_extract(&apos;foothebar&apos;, &apos;foo(.*?)(bar)&apos;, 2)</td>
+<td>bar<br>&#x82E5;&#x53D6;&#x7B2C;1&#x4E2A;&#x4E3A;the</td>
+<td>&#x62BD;&#x53D6;&#x5B57;&#x7B26;&#x4E32;subject&#x4E2D;&#x7B26;&#x5408;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;pattern&#x7684;&#x7B2C;index&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td>regexp_replace</td>
+<td>select regexp_replace(&apos;foobar&apos;,&apos;oo\</td>
+<td>ar&apos;,&apos;#&apos;)</td>
+<td>f#b#</td>
+<td>&#x4E0E;&#x4E0A;&#x7C7B;&#x4F3C;&#xFF0C;&#x66FF;&#x6362;</td>
+</tr>
+<tr>
+<td>split</td>
+<td>select split(&apos;1,2,3,4&apos;,&apos;,&apos;)</td>
+<td>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;]</td>
+<td>&#x62C6;&#x5206;&#x6210;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td>str_to_map</td>
+<td>select str_to_map(&apos;k1=v1,k2=v2&apos;,&apos;,&apos;,&apos;=&apos;)</td>
+<td>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x65E5;&#x671F;&#x51FD;&#x6570;">&#x65E5;&#x671F;&#x51FD;&#x6570;</h2>
+<table>
+<thead>
+<tr>
+<th>Func</th>
+<th>Code</th>
+<th>Result</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DateDelta</td>
+<td>SELECT DateDelta(&apos;2018-09-06&apos;,&apos;year=+1,month=1,day=1,day=-1&apos;)</td>
+<td>2018-12-31</td>
+<td>end day of this year<br><a href="https://github.com/jet2007/HiveDateUDF" target="_blank">https://github.com/jet2007/HiveDateUDF</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x8868;&#x751F;&#x6210;&#x51FD;&#x6570;">&#x8868;&#x751F;&#x6210;&#x51FD;&#x6570;</h2>
+<table>
+<thead>
+<tr>
+<th>Func</th>
+<th>Code</th>
+<th>Result</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>explode</td>
+<td>select explode(t.a) as ex_a from (</td>
+</tr>
+</tbody>
+</table>
+<p><br>select array(1,2,3) as a union all select array(4,3) as a ) t | 1,2,3,4,3&#x4E94;&#x884C;&#x8BB0;&#x5F55; | &#x4ECE;&#x539F;&#x8868;&#x7684;2&#x884C;&#xFF0C;&#x751F;&#x6210;5&#x884C;&#x6570;&#x636E; |</p>
+<ul>
+<li>lateral view&#x7528;&#x4E8E;&#x548C;split&#x3001;explode&#x7B49;UDTF&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x80FD;&#x5C06;&#x4E00;&#x884C;&#x6570;&#x636E;&#x62C6;&#x5206;&#x6210;&#x591A;&#x884C;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x53EF;&#x4EE5;&#x5BF9;&#x62C6;&#x5206;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x805A;&#x5408;</li>
+<li>select A,B,C from table_1 LATERAL VIEW explode(B) table1 as B</li>
+</ul>
+<pre><code>A                         B                                C
+190     [1030,1031,1032,1033,1190]      select id
+191     [1030,1031,1032,1033,1190]      select id
+
+190    1030  select id
+190    1031  select id
+190    1032  select id
+190    1033  select id
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="UDF使用.html" class="navigation navigation-next navigation-unique" aria-label="Next page: UDF使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Hive函数","level":"2.1.1","depth":2,"next":{"title":"UDF使用","level":"2.1.2","depth":2,"path":"docs/UDF使用.md","ref":"docs/UDF使用.md","articles":[]},"previous":{"title":"Hive函数","level":"2.1","depth":1,"ref":"","articles":[{"title":"Hive函数","level":"2.1.1","depth":2,"path":"docs/fun介绍.md","ref":"docs/fun介绍.md","articles":[]},{"title":"UDF使用","level":"2.1.2","depth":2,"path":"docs/UDF使用.md","ref":"docs/UDF使用.md","articles":[]},{"title":"UDF开发","level":"2.1.3","depth":2,"path":"docs/UDF开发.md","ref":"docs/UDF开发.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/fun介绍.md","mtime":"2019-07-22T03:00:39.708Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-23T03:07:26.528Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
