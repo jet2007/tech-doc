@@ -5,12 +5,12 @@
 ## 报表
 
 | 项目                                                     | 星级 | 介绍                                                         |
-| ------------------------------------------------------- | --- | ------------------------------------------------------------ |
+| :------------------------------------------------------- | :--- | ------------------------------------------------------------ |
 | [CBoard](https://github.com/yzhang921/CBoard)            | ***  | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
 | [Superset](https://github.com/apache/incubator-superset) | ***  | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
 | [metabase](https://github.com/metabase/metabase)         | **   | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
 | [EasyReport](https://github.com/metabase/metabase)       | *    | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
-| [ART](https://github.com/jet2007/art)                    | **   | Ctrip改进后的ART报表系统                                     |
+| [ART](https://github.com/jet2007/art)                    | ***  | Ctrip改进后的ART报表系统                                     |
 
 
 
@@ -58,57 +58,58 @@
 
 
 
-## 数据仓库辅助
+## 数据仓库+工具型
 
-| 项目                                  | 星级 | 介绍                                                         |
-| ------------------------------------- | ---- | ------------------------------------------------------------ |
-| [DWP](https://github.com/jet2007/DWP) | **** | 存储过程执行程序，支持hive、spark，常用数据库的业务执行过程日志收集 |
-| [                                     |      |                                                              |
-|                                       |      |                                                              |
-|                                       |      |                                                              |
-|                                       |      |                                                              |
+| 项目                                                    | 星级 | 介绍                                                         |
+| ------------------------------------------------------- | ---- | ------------------------------------------------------------ |
+| [DWP](https://github.com/jet2007/DWP)                   | **** | 存储过程执行程序，支持hive、spark，常用数据库的业务执行过程日志收集 |
+| [ParallelTool](https://github.com/jet2007/ParallelTool) | ***  | 并行执行同一个shell脚本的工具                                |
 
 
 
 ## Hive相关
 
+| 项目                                                         | 星级 | 介绍                                                         |
+| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
+| UDF:[hive-third-functions](https://github.com/aaronshan/hive-third-functions) | ***  | [jar包](https://github.com/aaronshan/hive-third-functions/releases/download/2.2.0/hive-third-functions-2.2.0-shaded.zip); 包含了一些很有用的hive udf函数，特别是数组和json函数.[说明文档](https://github.com/aaronshan/hive-third-functions/blob/master/README-zh.md);<br />**自行开发UDF项目可参考本项目**<br /> 示例select array_contains(array(16,12,18,9), 12) => true<br />select json_extract("{\"a\":{\"b\":\"12\"}}", "$.a.b"); => "12" |
+| UDF:[日期加减计算](https://github.com/jet2007/HiveDateUDF)   | ***  | [jar包](https://github.com/jet2007/HiveDateUDF/releases/download/rc-0.2/jet-hive-date-udf-0.2.jar), [详细介绍](https://github.com/jet2007/HiveDateUDF/blob/master/README.md)<br />仿照python relativedelta的日期加减计算，使用一个函数实现多次日期加减计算(如月份，日期相加)<br />示例：SELECT DateDelta('2018-09-06','year=+1,month=1,day=1,day=-1')-=>2018-12-31 |
+| UDF:[jet-hive-udf](https://github.com/jet2007/jet-hive-udf)  | ***  | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
+| [hive-jdbc-uber-jar](https://github.com/timveil/hive-jdbc-uber-jar) | *    | Hive JDBC "uber" or "standalone" jar based on the latest Hortonworks Data Platform (HDP) |
+| [PyHive](https://github.com/dropbox/PyHive)                  | **   | Python interface to Hive and Presto.                         |
+| [impyla](https://github.com/cloudera/impyla)                 | **   | Python DB API 2.0 client for Impala and Hive (HiveServer2 protocol) |
+
+
+
+## awesome
+
+| 项目                                                         | 星级 | 介绍                                                         |
+| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
+| [awesome-bigdata](https://github.com/jet2007/awesome-bigdata) | ***  | A curated list of awesome big data frameworks, ressources and other awesomeness. |
+| [awesome-sysadmin](https://github.com/jet2007/awesome-sysadmin) | ***  | A curated list of amazingly awesome open source sysadmin resources. |
+| [awesome-business-intelligence](https://github.com/jet2007/awesome-business-intelligence) | ***  | Actively curated list of awesome BI tools. PRs welcome!      |
+| [awesome-python](https://github.com/jet2007/awesome-python)  | ***  | A curated list of awesome Python frameworks, libraries, software and resources |
+| [awesome-mysql](https://github.com/jet2007/awesome-mysql)    | ***  | A curated list of awesome MySQL software, libraries, tools and resources |
+| [awesome](https://github.com/jet2007/awesome)                | ***  | Awesome lists about all kinds of interesting topics          |
+
+
+
+## sql相关
+
 | 项目                                                     | 星级 | 介绍                                                         |
 | -------------------------------------------------------- | ---- | ------------------------------------------------------------ |
-| [CBoard](https://github.com/yzhang921/CBoard)            | ***  | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
-| [Superset](https://github.com/apache/incubator-superset) | ***  | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
-| [metabase](https://github.com/metabase/metabase)         | **   | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
-| [EasyReport](https://github.com/metabase/metabase)       | *    | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
-| [ART](https://github.com/jet2007/art)                    | **   | Ctrip改进后的ART报表系统                                     |
-
-
-
-## 工具型
-
-| 项目                                                     | 星级 | 介绍                                                         |
-| -------------------------------------------------------- | ---- | ------------------------------------------------------------ |
-| [CBoard](https://github.com/yzhang921/CBoard)            | ***  | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
-| [Superset](https://github.com/apache/incubator-superset) | ***  | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
-| [metabase](https://github.com/metabase/metabase)         | **   | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
-| [EasyReport](https://github.com/metabase/metabase)       | *    | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
-| [ART](https://github.com/jet2007/art)                    | **   | Ctrip改进后的ART报表系统                                     |
-
-
-
-## sql解析类
-
-| 项目                                                     | 星级 | 介绍                                                         |
-| -------------------------------------------------------- | ---- | ------------------------------------------------------------ |
-| [CBoard](https://github.com/yzhang921/CBoard)            | ***  | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
-| [Superset](https://github.com/apache/incubator-superset) | ***  | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
-| [metabase](https://github.com/metabase/metabase)         | **   | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
-| [EasyReport](https://github.com/metabase/metabase)       | *    | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
-| [ART](https://github.com/jet2007/art)                    | **   | Ctrip改进后的ART报表系统                                     |
+| WEB SQL:[sqlpad](https://github.com/rickbergfalk/sqlpad) | ***  | Web-based SQL editor run in your own private cloud. Supports MySQL, Postgres, SQL Server, Vertica, Crate, Presto, SAP HANA, and Cassandra <http://rickbergfalk.github.io/sqlpad/> |
+| WEB SQL:OmniDB                                           | ***  | 基于 Web 的数据库管理工具                                    |
+| [Big-Bench](https://github.com/qlw/Big-Bench)            | **   | Big Bench Workload Development                               |
+| SQLParser                                                | **   | [MySQLParser](https://github.com/csbird/MySQLParser),[sqlparse](https://github.com/andialbrecht/sqlparse) |
+|                                                          |      |                                                              |
 
 
 
 
 
-# 技术文档：Gitbook+Github示例
+# 技术文档
+
+## Gitbook+Github示例
 
 - 以tech-doc\bigdata\hive目录为例
 - 技术文档的源目录：src-docs
