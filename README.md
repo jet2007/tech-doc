@@ -1,16 +1,19 @@
 [TOC]
 
 - Github项目
-  - [报表](#报表)
-  - [调度](#调度)
-  - [ETL](#ETL)
-  - [数据库同步](#数据库同步)
-  - [数据仓库+工具型](#数据仓库+工具型)
-  - [Hive相关](#Hive相关)
-  - [awesome](#awesome)
-  - [sql相关](#sql相关)
+  - 数据仓库
+    - [报表](#报表)
+    - [调度](#调度)
+    - [ETL](#ETL)
+    - [数据仓库+工具型](#数据仓库+工具型)
+    - [Hive相关](#Hive相关)
+  - 大数据平台
+  - 数据库
+    - [数据库同步](#数据库同步)
+    - [sql相关](#sql相关)
+  - [Awesome](#Awesome)
+  - [正则表达式](正则表达式)
 - 技术文档
-  - [ETL](#ETL)
   - [Gitbook+Github示例](#Gitbook+Github示例)
 
 
@@ -21,13 +24,13 @@
 
 ### 报表
 
-| 项目                                                     | 星级    | 介绍                                                         |
-| :------------------------------------------------------- | :------ | ------------------------------------------------------------ |
-| [CBoard](https://github.com/yzhang921/CBoard)            | * * * * | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
-| [Superset](https://github.com/apache/incubator-superset) | * * * * | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
-| [metabase](https://github.com/metabase/metabase)         | * *     | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
-| [EasyReport](https://github.com/metabase/metabase)       | *       | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
-| [ART](https://github.com/jet2007/art)                    | * * *   | Ctrip改进后的ART报表系统                                     |
+| 项目                                                     | 星级 | 介绍                                                         |
+| :------------------------------------------------------- | :--: | :----------------------------------------------------------- |
+| [CBoard](https://github.com/yzhang921/CBoard)            | **** | 较完善，CTRIPER开发，开源的易使用的BI报表工具/BI仪表盘平台； |
+| [Superset](https://github.com/apache/incubator-superset) | **** | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
+| [metabase](https://github.com/metabase/metabase)         |  **  | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
+| [EasyReport](https://github.com/metabase/metabase)       |  *   | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
+| [ART](https://github.com/jet2007/art)                    | ***  | Ctrip改进后的ART报表系统；原项目<http://art.sourceforge.net/> |
 
 
 
@@ -115,9 +118,7 @@
 
 
 
-## Awesome系列
-
-### Awesome
+## Awesome系
 
 | 项目                                                         | 星级 | 介绍                                                         |
 | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
@@ -127,6 +128,16 @@
 | [awesome-python](https://github.com/jet2007/awesome-python)  | ***  | A curated list of awesome Python frameworks, libraries, software and resources |
 | [awesome-mysql](https://github.com/jet2007/awesome-mysql)    | ***  | A curated list of awesome MySQL software, libraries, tools and resources |
 | [awesome](https://github.com/jet2007/awesome)                | ***  | Awesome lists about all kinds of interesting topics          |
+
+
+
+## 正则表达式
+
+| 项目                                                         | 星级 | 介绍                                                         |
+| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
+| [**ChinaMobilePhoneNumberRegex**](https://github.com/VincentSit/ChinaMobilePhoneNumberRegex) | **** | 中国大陆手机号码的正则表达式                                 |
+| [**common-regex**](<https://github.com/cdoco/common-regex>)  | **** | 常用正则表达式 - 收集一些在平时项目开发中经常用到的正则表达式. |
+|                                                              |      |                                                              |
 
 
 
