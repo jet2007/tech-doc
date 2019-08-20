@@ -4,34 +4,34 @@
   - [报表](#报表)
   - [调度](#调度)
   - [ETL](#ETL)
+  - [数据库同步](#数据库同步)
   - [数据仓库+工具型](#数据仓库+工具型)
   - [Hive相关](#Hive相关)
   - [awesome](#awesome)
   - [sql相关](#sql相关)
-  - [ETL](#ETL)
 - 技术文档
   - [ETL](#ETL)
-  - [ETL](#ETL)
+  - [Gitbook+Github示例](#Gitbook+Github示例)
 
 
 
 # Github项目
 
-## 报表
+## 数据仓库
+
+### 报表
 
 | 项目                                                     | 星级 | 介绍                                                         |
 | :------------------------------------------------------- | :--- | ------------------------------------------------------------ |
-| [CBoard](https://github.com/yzhang921/CBoard)            | ***  | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
-| [Superset](https://github.com/apache/incubator-superset) | ***  | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
-| [metabase](https://github.com/metabase/metabase)         | **   | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
-| [EasyReport](https://github.com/metabase/metabase)       | *    | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
-| [ART](https://github.com/jet2007/art)                    | ***  | Ctrip改进后的ART报表系统                                     |
+| [CBoard](https://github.com/yzhang921/CBoard)            | 4    | 较完善，CTRIPER开发，The most easiest to use, self-service open BI reporting and BI dashboard platform |
+| [Superset](https://github.com/apache/incubator-superset) | 4    | 14.6K星级 Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application |
+| [metabase](https://github.com/metabase/metabase)         | 2    | 6K星级，Metabase is the easy, open source way for everyone in your company to ask questions and learn from data. |
+| [EasyReport](https://github.com/metabase/metabase)       | 1    | 一个简单易用的Web报表工具(支持Hadoop,HBase及各种关系型数据库) |
+| [ART](https://github.com/jet2007/art)                    | 3    | Ctrip改进后的ART报表系统                                     |
 
 
 
-## 调度
-
-
+### 调度
 
 | 项目                                                         | 星级 | 介绍                                                         |
 | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
@@ -45,7 +45,7 @@
 
 
 
-## ETL
+### ETL
 
 | 项目                                                         | 星级 | 介绍                                                         |
 | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
@@ -59,21 +59,9 @@
 
 
 
-数据库同步
 
 
-
-| 项目                                              | 星级 | 介绍                                                         |
-| ------------------------------------------------- | ---- | ------------------------------------------------------------ |
-| [otter](https://github.com/alibaba/otter)         | ***  | 阿里巴巴分布式数据库同步系统(解决中美异地机房)；定位： 基于数据库增量日志解析，准实时同步到本机房或异地机房的mysql/oracle数据库. 一个分布式数据库同步系统；otter已在阿里云推出商业化版本 [数据传输服务DTS] |
-| [DataLink](https://github.com/ucarGroup/DataLink) | ***  | DataLink是一个满足各种异构数据源之间的实时增量同步，分布式、可扩展的数据交换平台。 |
-| canal                                             |      |                                                              |
-|                                                   |      |                                                              |
-|                                                   |      |                                                              |
-
-
-
-## 数据仓库+工具型
+### 数据仓库+工具型
 
 | 项目                                                    | 星级 | 介绍                                                         |
 | ------------------------------------------------------- | ---- | ------------------------------------------------------------ |
@@ -82,7 +70,7 @@
 
 
 
-## Hive相关
+### Hive相关
 
 | 项目                                                         | 星级 | 介绍                                                         |
 | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
@@ -95,7 +83,41 @@
 
 
 
-## awesome
+## 大数据平台
+
+
+
+## 数据库
+
+### 数据库同步
+
+
+
+| 项目                                              | 星级 | 介绍                                                         |
+| ------------------------------------------------- | ---- | ------------------------------------------------------------ |
+| [otter](https://github.com/alibaba/otter)         | ***  | 阿里巴巴分布式数据库同步系统(解决中美异地机房)；定位： 基于数据库增量日志解析，准实时同步到本机房或异地机房的mysql/oracle数据库. 一个分布式数据库同步系统；otter已在阿里云推出商业化版本 [数据传输服务DTS] |
+| [DataLink](https://github.com/ucarGroup/DataLink) | ***  | DataLink是一个满足各种异构数据源之间的实时增量同步，分布式、可扩展的数据交换平台。 |
+| canal                                             |      |                                                              |
+
+
+
+### Sql相关
+
+| 项目                                                     | 星级 | 介绍                                                         |
+| -------------------------------------------------------- | ---- | ------------------------------------------------------------ |
+| WEB SQL:[sqlpad](https://github.com/rickbergfalk/sqlpad) | ***  | Web-based SQL editor run in your own private cloud. Supports MySQL, Postgres, SQL Server, Vertica, Crate, Presto, SAP HANA, and Cassandra <http://rickbergfalk.github.io/sqlpad/> |
+| WEB SQL:OmniDB                                           | ***  | 基于 Web 的数据库管理工具                                    |
+| [Big-Bench](https://github.com/qlw/Big-Bench)            | **   | Big Bench Workload Development                               |
+| SQLParser                                                | **   | [MySQLParser](https://github.com/csbird/MySQLParser),[sqlparse](https://github.com/andialbrecht/sqlparse) |
+|                                                          |      |                                                              |
+
+
+
+
+
+## Awesome系列
+
+### Awesome
 
 | 项目                                                         | 星级 | 介绍                                                         |
 | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
@@ -105,18 +127,6 @@
 | [awesome-python](https://github.com/jet2007/awesome-python)  | ***  | A curated list of awesome Python frameworks, libraries, software and resources |
 | [awesome-mysql](https://github.com/jet2007/awesome-mysql)    | ***  | A curated list of awesome MySQL software, libraries, tools and resources |
 | [awesome](https://github.com/jet2007/awesome)                | ***  | Awesome lists about all kinds of interesting topics          |
-
-
-
-## sql相关
-
-| 项目                                                     | 星级 | 介绍                                                         |
-| -------------------------------------------------------- | ---- | ------------------------------------------------------------ |
-| WEB SQL:[sqlpad](https://github.com/rickbergfalk/sqlpad) | ***  | Web-based SQL editor run in your own private cloud. Supports MySQL, Postgres, SQL Server, Vertica, Crate, Presto, SAP HANA, and Cassandra <http://rickbergfalk.github.io/sqlpad/> |
-| WEB SQL:OmniDB                                           | ***  | 基于 Web 的数据库管理工具                                    |
-| [Big-Bench](https://github.com/qlw/Big-Bench)            | **   | Big Bench Workload Development                               |
-| SQLParser                                                | **   | [MySQLParser](https://github.com/csbird/MySQLParser),[sqlparse](https://github.com/andialbrecht/sqlparse) |
-|                                                          |      |                                                              |
 
 
 
